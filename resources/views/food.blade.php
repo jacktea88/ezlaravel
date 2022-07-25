@@ -66,6 +66,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <!--// Meta tag Keywords -->
 
   <!-- Custom-Files -->
+  {{-- 將以下全部原模板的css & js & image檔案路徑都改成laravel專案的路徑assets --}}
   <!-- jack0708 update to BS5 -->
   <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
   <!-- BS5.2 CSS only -->
