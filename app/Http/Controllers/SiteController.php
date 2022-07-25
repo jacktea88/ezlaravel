@@ -31,6 +31,7 @@ class SiteController extends Controller
     public function renderWelcomePage()
     {
         // return view('welcome');
+        //將首頁改成新的模板
         return view('food');
     }
 
