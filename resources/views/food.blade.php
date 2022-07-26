@@ -24,7 +24,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       window.scrollTo(0, 1);
     }
   </script>
-  <style>
+
+{{-- 可選擇是否要繼承的style部份 --}}
+@section('style_filterDiv')
+<style>
     .filterDiv {
       float: left;
       background-color: #2196F3;
@@ -35,16 +38,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       margin: 2px;
       display: none;
     }
+</style>
+@show
 
+@section('style_show')
+<style>
     .show {
       display: block;
     }
+</style>
+@show
 
+@section('style_container')
+<style>
     .container {
       margin-top: 20px;
       overflow: hidden;
     }
+</style>
+@show
 
+@section('style_btn')
+<style>
     /* Style the buttons */
     .btn {
       border: none;
@@ -62,7 +77,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       background-color: #666;
       color: white;
     }
-  </style>
+</style>
+@show
+
   <!--// Meta tag Keywords -->
 
   <!-- Custom-Files -->
@@ -239,6 +256,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 
+@yield('Content')
 
   <!-- banner -->
   <div class="callbacks_container">
@@ -695,6 +713,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   </div>
   <!--//contact-->
 
+@yield('footer')
+
   <!-- footer -->
   <footer class="pt-5">
     <div class="container py-xl-5 py-lg-3">
@@ -785,14 +805,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
   <!-- Js files -->
   <!-- JavaScript -->
+@section('js_jquery')
   {{-- <script src="js/jquery-2.2.3.min.js"></script> --}}
   <script src="{{ asset('assets/js/jquery-2.2.3.min.js') }}"></script>
-
   <!-- Default-JavaScript-File -->
+@show
 
+@section('js_banner')
   <!-- banner slider -->
   {{-- <script src="js/responsiveslides.min.js"></script> --}}
   <script src="{{ asset('assets/js/responsiveslides.min.js') }}"></script>
+
 
   <script>
     // You can also use "$(window).load(function() {"
@@ -815,7 +838,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     });
   </script>
   <!-- //banner slider -->
+  @show
 
+  @section('js_password')
   <!-- password-script -->
   <script>
     window.onload = function () {
@@ -838,30 +863,39 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     }
   </script>
   <!-- //password-script -->
+@show
 
+@section('js_gallery')
   <!-- gallery light box -->
   {{-- <script src="js/smoothbox.jquery2.js"></script> --}}
   <script src="{{ asset('assets/js/smoothbox.jquery2.js') }}"></script>
-
   <!-- //gallery light box -->
+@show
 
+@section('js_scrolling')
   <!-- smooth scrolling -->
   {{-- <script src="js/SmoothScroll.min.js"></script> --}}
   <script src="{{ asset('assets/js/SmoothScroll.min.js') }}"></script>
-
   <!-- //smooth scrolling -->
+@show
 
+@section('js_moveTop')
   <!-- move-top -->
   {{-- <script src="js/move-top.js"></script> --}}
   <script src="{{ asset('assets/js/move-top.js') }}"></script>
+@show
 
+@section('js_easing')
   <!-- easing -->
   {{-- <script src="js/easing.js"></script> --}}
   <script src="{{ asset('assets/js/easing.js') }}"></script>
+@show
 
+@section('js_snacks')
   <!--  necessary snippets for few javascript files -->
   {{-- <script src="js/snacks.js"></script> --}}
   <script src="{{ asset('assets/js/snacks.js') }}"></script>
+@show
 
   <!-- jack0708 update to BS5 -->
   <!-- <script src="js/bootstrap.js"></script> -->
